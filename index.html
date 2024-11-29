@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연속 운동 캘린더</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>연속 운동 캘린더 🏃‍♂️</h1>
+            <div class="streak-badge">
+                <span class="streak-icon">🔥</span>
+                <p class="streak-count">현재 연속 <span id="streakCount">0</span>일째</p>
+            </div>
+        </header>
+
+        <main>
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <button id="prevMonth" class="month-btn">&lt;</button>
+                    <h2 id="currentMonth">2024년 3월</h2>
+                    <button id="nextMonth" class="month-btn">&gt;</button>
+                </div>
+
+                <div class="calendar">
+                    <div class="weekdays">
+                        <div class="weekday sunday">일</div>
+                        <div class="weekday">월</div>
+                        <div class="weekday">화</div>
+                        <div class="weekday">수</div>
+                        <div class="weekday">목</div>
+                        <div class="weekday">금</div>
+                        <div class="weekday saturday">토</div>
+                    </div>
+                    <div id="calendarDays" class="calendar-grid">
+                        <!-- JavaScript로 동적 생성될 예시 -->
+                        <div class="calendar-day prev-month">30</div>
+                        <div class="calendar-day">1</div>
+                        <div class="calendar-day">2</div>
+                        <div class="calendar-day">3</div>
+                        <div class="calendar-day workout-done">4</div>
+                        <div class="calendar-day workout-done">5</div>
+                        <div class="calendar-day">6</div>
+                        <!-- 나머지 날짜들... -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="workout-form">
+                <h3>✍️ 오늘의 운동 기록</h3>
+                <div class="input-group">
+                    <input type="text" id="workoutInput" placeholder="오늘 어떤 운동을 하셨나요? (예: 조깅 30분)">
+                    <button id="recordWorkout" class="record-btn">기록하기</button>
+                </div>
+            </div>
+
+            <section class="statistics">
+                <h3>📊 나의 운동 통계</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📅</div>
+                        <h4>이번 달 운동일수</h4>
+                        <p id="monthlyWorkouts">0일</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏆</div>
+                        <h4>최고 연속일수</h4>
+                        <p id="bestStreak">0일</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
